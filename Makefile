@@ -1,6 +1,6 @@
 GPU=1
-CUDNN=1
-OPENCV=1
+CUDNN=0
+OPENCV=0
 OPENMP=0
 DEBUG=0
 
@@ -46,9 +46,9 @@ COMMON+= `pkg-config --cflags opencv`
 endif
 
 ifeq ($(GPU), 1) 
-COMMON+= -DGPU -I/usr/local/cuda-8.0/include/
+COMMON+= -DGPU -I/usr/local/cuda/include/
 CFLAGS+= -DGPU
-LDFLAGS+= -L/usr/local/cuda-8.0/lib64 -lcuda -lcudart -lcublas -lcurand
+LDFLAGS+= -L/usr/local/cuda/lib64 -lcuda -lcudart -lcublas -lcurand
 endif
 
 ifeq ($(CUDNN), 1) 
