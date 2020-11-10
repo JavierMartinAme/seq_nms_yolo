@@ -12,6 +12,7 @@ This project combines **YOLOv2**([reference](https://arxiv.org/abs/1506.02640)) 
 
 ## Steps
 1. create a conda environment with `conda create --name env-name python=2.7`; 
+1. clone the repository using `git clone`
 1. `make` the project;
 1. Download `yolo.weights` and `tiny-yolo.weights` by running `wget https://pjreddie.com/media/files/yolo.weights` and `wget https://pjreddie.com/media/files/yolov2-tiny.weights`;
 1. Copy a video file to the video folder, for example, `input.mp4`;
